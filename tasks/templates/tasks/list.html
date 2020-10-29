@@ -3,17 +3,22 @@
 <form method="POST" action="/">
     {% csrf_token %}
     {{form.title}}
+    {{form.description}}
+    {{form.deadline}}
     <input type="submit" name="Create Task">
 </form>
 
 {% for task in tasks%}
-    <div>
+    <div style="border: dotted 1px blue;">
+        <a href="{% url 'view_task' task.id %}">View</a>
         <a href="{% url 'update_task' task.id %}">Update</a>
         <a href="{% url 'delete_task' task.id %}">Delete</a>
         {% if task.complete == True %}
-        <strike><p>{{task}}</p></strike>
+            <strike><p>{{task}}</p></strike>
         {% else %}
-        <p>{{task}}</p>
+            <p>{{task}}</p>
+            <p>{{task.description}}</p>
+            <p>Deadline: {{task.deadline}}</p>
         {% endif %}
     </div>
 {% endfor %}
