@@ -79,12 +79,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'todolistapp',
-        # 'HOST': 'mongodb+srv://webtechadmin:WJBhjB27K499FRLF@cluster0.f5yls.mongodb.net/todolistapp?retryWrites=true&w=majority',
-        # 'USER': 'webtechadmin',
-        # 'PASSWORD': 'WJBhjB27K499FRLF',
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        # mongodb+srv://webtechadmin:<password>@cluster0.f5yls.mongodb.net/<dbname>?retryWrites=true&w=majority
     }
 }
 
